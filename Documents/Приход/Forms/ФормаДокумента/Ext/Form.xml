@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<Table name="ПриходТаблица" id="7">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ПриходТаблица</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПриходТаблицаКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="ПриходТаблицаКоманднаяПанель" id="9"/>
+			<ExtendedTooltip name="ПриходТаблицаРасширеннаяПодсказка" id="10"/>
+			<SearchStringAddition name="ПриходТаблицаСтрокаПоиска" id="11">
+				<AdditionSource>
+					<Item>ПриходТаблица</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПриходТаблицаСтрокаПоискаКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ПриходТаблицаСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПриходТаблицаСостояниеПросмотра" id="14">
+				<AdditionSource>
+					<Item>ПриходТаблица</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПриходТаблицаСостояниеПросмотраКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ПриходТаблицаСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПриходТаблицаУправлениеПоиском" id="17">
+				<AdditionSource>
+					<Item>ПриходТаблица</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПриходТаблицаУправлениеПоискомКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ПриходТаблицаУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ПриходТаблицаНомерСтроки" id="20">
+					<DataPath>Объект.ПриходТаблица.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПриходТаблицаНомерСтрокиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ПриходТаблицаНомерСтрокиРасширеннаяПодсказка" id="22"/>
+				</LabelField>
+				<InputField name="ПриходТаблицаНомеклатура" id="23">
+					<DataPath>Объект.ПриходТаблица.Номеклатура</DataPath>
+					<ContextMenu name="ПриходТаблицаНомеклатураКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ПриходТаблицаНомеклатураРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="ПриходТаблицаКоличетво" id="26">
+					<DataPath>Объект.ПриходТаблица.Количество</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПриходТаблицаКоличетвоКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ПриходТаблицаКоличетвоРасширеннаяПодсказка" id="28"/>
+					<Events>
+						<Event name="OnChange">ПриходТаблицаКоличетвоПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ПриходТаблицаЦеннаЗаШтуку" id="35">
+					<DataPath>Объект.ПриходТаблица.ЦенаЗаШтуку</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПриходТаблицаЦеннаЗаШтукуКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ПриходТаблицаЦеннаЗаШтукуРасширеннаяПодсказка" id="37"/>
+					<Events>
+						<Event name="OnChange">ПриходТаблицаЦеннаЗаШтукуПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ПриходТаблицаСумма" id="41">
+					<DataPath>Объект.ПриходТаблица.Сумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПриходТаблицаСуммаКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ПриходТаблицаСуммаРасширеннаяПодсказка" id="43"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.Приход</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>AccumulationRegister.Товары.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

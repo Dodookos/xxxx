@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<Table name="РасходТаблица" id="7">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.РасходТаблица</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="РасходТаблицаКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="РасходТаблицаКоманднаяПанель" id="9"/>
+			<ExtendedTooltip name="РасходТаблицаРасширеннаяПодсказка" id="10"/>
+			<SearchStringAddition name="РасходТаблицаСтрокаПоиска" id="11">
+				<AdditionSource>
+					<Item>РасходТаблица</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РасходТаблицаСтрокаПоискаКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="РасходТаблицаСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="РасходТаблицаСостояниеПросмотра" id="14">
+				<AdditionSource>
+					<Item>РасходТаблица</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РасходТаблицаСостояниеПросмотраКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="РасходТаблицаСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="РасходТаблицаУправлениеПоиском" id="17">
+				<AdditionSource>
+					<Item>РасходТаблица</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="РасходТаблицаУправлениеПоискомКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="РасходТаблицаУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="РасходТаблицаНомерСтроки" id="20">
+					<DataPath>Объект.РасходТаблица.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РасходТаблицаНомерСтрокиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="РасходТаблицаНомерСтрокиРасширеннаяПодсказка" id="22"/>
+				</LabelField>
+				<InputField name="РасходТаблицаНомеклатура" id="26">
+					<DataPath>Объект.РасходТаблица.Номеклатура</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РасходТаблицаНомеклатураКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="РасходТаблицаНомеклатураРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="РасходТаблицаКоличество" id="23">
+					<DataPath>Объект.РасходТаблица.Количество</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РасходТаблицаКоличествоКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="РасходТаблицаКоличествоРасширеннаяПодсказка" id="25"/>
+					<Events>
+						<Event name="OnChange">РасходТаблицаКоличествоПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="РасходТаблицаЦенаЗаШтуку" id="32">
+					<DataPath>Объект.РасходТаблица.ЦенаЗаШтуку</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РасходТаблицаЦенаЗаШтукуКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="РасходТаблицаЦенаЗаШтукуРасширеннаяПодсказка" id="34"/>
+					<Events>
+						<Event name="OnChange">РасходТаблицаЦенаЗаШтукуПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="РасходТаблицаСумма" id="29">
+					<DataPath>Объект.РасходТаблица.Сумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РасходТаблицаСуммаКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="РасходТаблицаСуммаРасширеннаяПодсказка" id="31"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.Расход</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>AccumulationRegister.Товары.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>1:ca54eaf8-2c69-4a85-897f-ff9059f4ec14</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>
